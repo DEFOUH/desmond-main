@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="phone">
+        <div class="phone-screen">
+            <span class="camera">o</span>
+            <span class="speaker"></span>
+            <span class="sensors">.</span>
+        </div>
+        <div class="screen">
+            <div class="controls">
+                <div class="left" >
+                    <p>11:12am</p>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-meta"></i>
+                    <i class="bi bi-whatsapp"></i>
+                    
+                </div>
+                <div class="right">
+                    <i class="bi bi-alarm"></i>
+                    <i class="bi bi-bar-chart-fill"></i>
+                    <i class="bi bi-battery-half"></i>
+                    <p>68%</p>
+                </div>
+            </div>
+            <div id="notify" class="pannel">
+                <div class="row11">
+                    <button><i class="bi bi-wifi"></i></button>
+                    <button><i class="bi bi-bluetooth"></i></button>
+                    <button><i class="bi bi-bar-chart-fill"></i></i></button>
+                </div>
+                <div class="row11">
+                    <button><i class="bi bi-airplane-fill"></i></button>
+                    <button><i class="bi bi-battery-full"></i></button>
+                    <button><i class="bi bi-arrow-repeat"></i></button>
+                </div>
+                <div class="row11">
+                    <button><i class="bi bi-geo-alt-fill"></i></button>
+                    <button><i class="bi bi-share-fill"></i></button>
+                    <button><i class="bi bi-router-fill"></i></button>
+                </div>
+                <div class="row11">
+                    <button><i class="bi bi-gear-fill"></i></button>
+                    <button><i class="bi bi-eye-fill"></i></button>
+                    <button><i class="bi bi-sim-fill"></i></button>
+                </div>
+                <div class="row11">
+                    <button></button>
+                    <button><i class="bi bi-person-circle"></i></button>
+                    <button></button>
+                </div>
+                <div class="row22">
+                    <p><i class="bi bi-facebook"></i> you have a new notification <br>Prosper pope liked your story</p>
+                </div>
+                <div class="row33">
+                    <p><i class="bi bi-whatsapp"></i>you might be having new messages</p>
+                </div>
+                <div class="row44">
+                    <p><i class="bi bi-meta"> </i></p>
+                </div>
+            </div>
+            <div class="display">
+                <input class="answer" id="answerDisplay" type="text">
+                <input class="compute-text" id="writein" type="text">
+            </div>
+            <div class="funtion">
+                <div class="btn-holder">
+                    <div class="carousel-slide">
+                        <button class="bta" id="+/-" value="+/-">+/-</button>
+                        <button class="bta" id="" value="(" onclick="writeValue('(')">(</button>
+                        <button class="bta" id="" value=")" onclick="writeValue(')')">)</button>
+                        <button class="bta" id="" value="!" onclick="writeValue('!')">!</button>
+                    </div>
+                    <div class="carousel-slide">
+                        <button class="bta" id="" value="DEG">DEG</button>
+                        <button class="bta" id="" value="sin" onclick="writeValue('sin(')">sin</button>
+                        <button class="bta" value="cos" id="btn" onclick="writeValue('cos(')">cos</button>
+                        <button class="bta" id="" value="tan" onclick="writeValue('tan(')">tan</button>
+                    </div>
+                    <div class="carousel-slide">
+                        <button class="bta" id="" value="INV">INV</button>
+                        <button class="bta" id="" value="e">e</button>
+                        <button class="bta" id="" value="ln">ln</button>
+                        <button class="bta" id="" value="log">log</button>
+                    </div>
+                    <span onclick="plusSlides(-1)" class="bt">&#10094;</span>
+                    <span onclick="plusSlides(1)" class="bt">&#10095;</span>
+                </div>
+            </div>
+
+            <div class="btn-holder">
+                <div class="row">
+                    <button class="input bluue" value="c" id="C" onclick="clearInput()">AC</button>
+                    <button class="input blue" value="()" id="btn" onclick="writeValue('%')">%</button>
+                    <button class="input blue" value="%" id="btn" onclick="writeValue('%')">$</button>
+                    <button class="input blue" value="/" v onclick="writeValue('/')">/</button>
+                </div>
+                <div class="row">
+                    <button class="input" value="7" id="btn" onclick="writeValue(7)">7</button>
+                    <button class="input" value="8" id="btn" onclick="writeValue(8)">8</button>
+                    <button class="input" value="9" id="btn" onclick="writeValue(9)">9</button>
+                    <button class="input blue" id="" value="*" onclick="writeValue('*')">X</button>
+                </div>
+                <div class="row">
+                    <button class="input" value="4" id="btn" onclick="writeValue(4)">4</button>
+                    <button class="input" value="5" id="btn" onclick="writeValue(5)">5</button>
+                    <button class="input" value="6" id="btn" onclick="writeValue(6)">6</button>
+                    <button class="input blue" value="-" id="btn" onclick="writeValue('-')">-</button>
+                </div>
+                <div class="row">
+                    <button class="input" value="1" id="btn" onclick="writeValue(1)">1</button>
+                    <button class="input" value="2" id="btn" onclick="writeValue(2)">2</button>
+                    <button class="input" value="3" id="btn" onclick="writeValue(3)">3</button>
+                    <button class="input blue" value="+" id="btn" onclick="writeValue('+')">+</button>
+                </div>
+                <div class="row">
+                    <button class="input" value="0" id="btn" onclick="writeValue(0)">0</button>
+                    <button class="input" value="." id="btn" onclick="writeValue('.')">.</button>
+                    <button class="input" value="DEL" id="btn" onclick="deleteLastChar()"><i class="bi bi-backspace-fill"></i></button>
+                    <button class="operator input" value="=" id="btn" onclick="evaluateExpression()">=</button>
+                </div>
+            </div>
+            <span class="homee"></span>
+        </div>
+        <div class="navigation">
+            <div class="back"></div>
+            <button class="home"><a href=".animation/index.html">home</a></button>
+            <div class="recent"></div>
+        </div>
+    </div>
+    <span class="volume"></span>
+    <span class="power"></span>
+    <button onclick="myFunction()" class="toggle-btn">show</button>
+    <script src="calculatro.js"> </script>
+</body>
+</html>
